@@ -1,9 +1,9 @@
 /*
-6.8~6.18 热力来袭 六月爱生活
+6.8~6.18 全利以赴 谁是囤货王
 新增开卡脚本
 一次性脚本
-https://lzdz-isv.isvjcloud.com/dingzhi/bd/common/activity/3071640?activityId=90322060104&shareUuid=d8ea880982534645b5372bbe9a275886&adsource=null&shareuserid4minipg=0JNwymG0n/7MOPkHzYrG4KuPlrbwajr+mlKSAUQGJeinh9LA4YCEcFb8KdjJBCTv&shopid=undefined
-cron "1 1 1 1 1 1" jd_opencard0601_2.js
+https://lzdz-isv.isvjcloud.com/dingzhi/bd/common/activity/3071640?activityId=dzlhkke4cc7da358ff4fa18352ce88&shareUuid=dd684988d07e48688c047883e988f425&adsource=null&shareuserid4minipg=0JNwymG0n/7MOPkHzYrG4KuPlrbwajr+mlKSAUQGJeinh9LA4YCEcFb8KdjJBCTv&shopid=undefined
+cron "1 1 1 1 1 1" jd_opencard060802.js
 */
 
 let guaopencard_addSku = "false"
@@ -11,7 +11,7 @@ let guaopencard = "false"
 let guaopenwait = "0"
 let guaopencard_draw = "0"
 
-const $ = new Env('热力来袭 六月爱生活')
+const $ = new Env('全利以赴 谁是囤货王')
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 CryptoScripts()
@@ -39,14 +39,14 @@ if ($.isNode()) {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
-guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku225 ? process.env.guaopencard_addSku225 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku225') ? $.getdata('guaopencard_addSku225') : `${guaopencard_addSku}`);
+guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku226 ? process.env.guaopencard_addSku226 : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku226') ? $.getdata('guaopencard_addSku226') : `${guaopencard_addSku}`);
 guaopencard_addSku = $.isNode() ? (process.env.guaopencard_addSku_All ? process.env.guaopencard_addSku_All : `${guaopencard_addSku}`) : ($.getdata('guaopencard_addSku_All') ? $.getdata('guaopencard_addSku_All') : `${guaopencard_addSku}`);
-guaopencard = $.isNode() ? (process.env.guaopencard225 ? process.env.guaopencard225 : `${guaopencard}`) : ($.getdata('guaopencard225') ? $.getdata('guaopencard225') : `${guaopencard}`);
+guaopencard = $.isNode() ? (process.env.guaopencard226 ? process.env.guaopencard226 : `${guaopencard}`) : ($.getdata('guaopencard226') ? $.getdata('guaopencard226') : `${guaopencard}`);
 guaopencard = $.isNode() ? (process.env.guaopencard_All ? process.env.guaopencard_All : `${guaopencard}`) : ($.getdata('guaopencard_All') ? $.getdata('guaopencard_All') : `${guaopencard}`);
 guaopenwait = $.isNode() ? (process.env.guaopenwait134 ? process.env.guaopenwait134 : `${guaopenwait}`) : ($.getdata('guaopenwait134') ? $.getdata('guaopenwait134') : `${guaopenwait}`);
 guaopenwait = $.isNode() ? (process.env.guaopenwait_All ? process.env.guaopenwait_All : `${guaopenwait}`) : ($.getdata('guaopenwait_All') ? $.getdata('guaopenwait_All') : `${guaopenwait}`);
 guaopenwait = parseInt(guaopenwait, 10) || 0
-guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw225 ? process.env.guaopencard_draw225 : guaopencard_draw) : ($.getdata('guaopencard_draw225') ? $.getdata('guaopencard_draw225') : guaopencard_draw);
+guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw226 ? process.env.guaopencard_draw226 : guaopencard_draw) : ($.getdata('guaopencard_draw226') ? $.getdata('guaopencard_draw226') : guaopencard_draw);
 guaopencard_draw = $.isNode() ? (process.env.guaopencard_draw ? process.env.guaopencard_draw : guaopencard_draw) : ($.getdata('guaopencard_draw') ? $.getdata('guaopencard_draw') : guaopencard_draw);
 allMessage = ""
 message = ""
@@ -58,7 +58,7 @@ let activityCookie =''
 !(async () => {
   if ($.isNode()) {
     if(guaopencard+"" != "true"){
-      console.log('如需执行脚本请设置环境变量[guaopencard225]为"true"')
+      console.log('如需执行脚本请设置环境变量[guaopencard226]为"true"')
     }
     if(guaopencard+"" != "true"){
       return
@@ -70,10 +70,10 @@ let activityCookie =''
     });
     return;
   }
-  $.activityId = "dzlhkk17e740478a2c5580a664c23f"
-  $.shareUuid = "de1687cff8564e5782ff2b234897e54e"
+  $.activityId = "dzlhkke4cc7da358ff4fa18352ce88"
+  $.shareUuid = "dd684988d07e48688c047883e988f425"
   console.log(`入口:\nhttps://lzdz1-isv.isvjcloud.com/dingzhi/customized/common/activity?activityId=${$.activityId}&shareUuid=${$.shareUuid}`)
-  let shareUuidArr = [$.shareUuid,'de1687cff8564e5782ff2b234897e54e','de0c89f63c484e00ba1da509c546536c']
+  let shareUuidArr = [$.shareUuid,'dd684988d07e48688c047883e988f425']
   let s = Math.floor((Math.random()*10))
   let n = 0
   if(s >= 1 && s<= 6) n = Math.floor((Math.random()*shareUuidArr.length))
@@ -222,7 +222,7 @@ async function run() {
           await cleanCart.clean(cookie,'https://jd.11111118/jdcleancatr_21102717',goodsArr || [ ])
         }
       }else{
-        console.log('如需加购请设置环境变量[guaopencard_addSku225]为"true"');
+        console.log('如需加购请设置环境变量[guaopencard_addSku226]为"true"');
       }
     }
     if(flag){
@@ -246,7 +246,7 @@ async function run() {
         }
         await $.wait(parseInt(Math.random() * 2000 + 2000, 10))
       }
-    }else console.log('如需抽奖请设置环境变量[guaopencard_draw225]为"3" 3为次数');
+    }else console.log('如需抽奖请设置环境变量[guaopencard_draw226]为"3" 3为次数');
 
     await $.wait(parseInt(Math.random() * 1000 + 2000, 10))
     await takePostRequest('getDrawRecordHasCoupon');
@@ -286,7 +286,7 @@ async function takePostRequest(type) {
   switch (type) {
     case 'isvObfuscator':
       url = `https://api.m.jd.com/client.action?functionId=isvObfuscator`;
-      body = `body=%7B%22url%22%3A%22https%3A//lzdz1-isv.isvjcloud.com%22%2C%22id%22%3A%22%22%7D&uuid=ab640b5dc76b89426f72115f5b2e06e934a5fbe9&client=apple&clientVersion=10.1.4&st=1650250640876&sv=102&sign=7ea66dcb2969eff53c43b5b8a4937dbe`;
+      body = `body=%7B%22url%22%3A%22https%3A%5C/%5C/lzdz1-isv.isvjcloud.com%22%2C%22id%22%3A%22%22%7D&uuid=aQf1ZRdxb2r4ovZ1EJZhcxYlVNZSZz09&build=168106&client=apple&clientVersion=11.0.4&d_brand=apple&st=1654620364952sign=ae4c8a6c015f8b115889e5d7b544a157`;
       break;
       case 'getSimpleActInfoVo':
         url = `${domain}/dz/common/getSimpleActInfoVo`;
@@ -793,7 +793,7 @@ async function joinShop() {
     let activityId = ``
     if ($.shopactivityId) activityId = `,"activityId":${$.shopactivityId}`
     let body = `{"venderId":"${$.joinVenderId}","shopId":"${$.joinVenderId}","bindByVerifyCodeFlag":1,"registerExtend":{},"writeChildFlag":0${activityId},"channel":406}`
-    let h5st = '20220412164645241%3B3634d1aeada6d9cd11a7526a3a6ac63e%3B169f1%3Btk02wd66f1d7418nXuLjsmO3oJMCxUqKVwIf4q1WRptKRT3nJSrx01oYYBAylbSuyg4sipnEzyEJOZuFjfG2QERcBtzd%3B6b455234e93be4ec963cd7c575d70882b838ba588149a1f54b69c8d0dacf14da%3B3.0%3B1649753205241'
+    let h5st = '20220608004600216%3B5204152783652117%3B8adfb%3Btk02w8c3e1bb718nUvS2jBUrW99uMwdAaV2FHTFBXmGDwy6Vs%2FaUxSABGKCo9K3WqFkG4KaIYE3aLhwDCukxoKRWOfkU%3B38fa81e2c4a99ba3c7389bc816d3752d529c1d791534cc31a0d96066a1d8b57c%3B3.0%3B1654620360216'
     // try {
     //   h5st = await h5stSign(body, "bindWithVender") || 'undefined'
     // } catch (e) {
